@@ -315,6 +315,14 @@ export default function Portfolio() {
             Guía para revisar el código y ejecutar las 22 pruebas de Python{" "}
             <ArrowUpRight size={14} />
           </a>
+          <a
+            className="studio-review-link"
+            href="https://github.com/kcortes765/portfolio-data-projects"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Leer el código en GitHub <ArrowUpRight size={14} />
+          </a>
         </section>
         <section className="studio-more" aria-labelledby="more-title">
           <div className="studio-section-head">
