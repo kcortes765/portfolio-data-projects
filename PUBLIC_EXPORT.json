@@ -1,12 +1,13 @@
 {
   "date": "2026-10-18",
-  "source_zip_sha256": "a20bdfc55df053a3a539209aee115898cd7b7a014804ca20d514cc3d4756fa77",
+  "source_zip_sha256": "b9cb9ce2d804a0687d3569ba0b6ff522c7bfbe4abb8013ae8107dabdf48ca224",
   "sanitization": [
     "site identity removed",
     "local state excluded by allowlist",
     "private Git history omitted",
     "only isolated Python CI retained"
   ],
+  "hash_scope": "Git index blob bytes after LF normalization",
   "files": [
     {
       "path": ".dockerignore",
@@ -33,6 +34,14 @@
       "sha256": "fef11f34f0aedaf0661fd5fd291be683f44fa0d708cae4e8dacbb2e159fc2f23"
     },
     {
+      "path": "Dockerfile.pipeline",
+      "sha256": "609a8e46d163a5dd67f27f0526b504558ea1a817746535edc46969d1b6016597"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d266d7d7bdf9b618712637e6e3b834475ff679bdb4b52f6afe301aa93e23393c"
+    },
+    {
       "path": "app/api/generation/route.ts",
       "sha256": "96e1a604d94c2c6f84fd1539ac7a25990f0073e667aaf373671bf92c7a37a54d"
     },
@@ -50,7 +59,7 @@
     },
     {
       "path": "app/ceic/page.tsx",
-      "sha256": "eb08a657689eddaf3d24ed2bb77a809edf912891ece31fbc6705e3c76e5ed735"
+      "sha256": "227178bb40e47450c721d473403e8cae155da3cb5d8acdd138c3ad03e9739476"
     },
     {
       "path": "app/chatgpt-auth.ts",
@@ -61,6 +70,14 @@
       "sha256": "7309735858d7f11011ec588aa6046acb288e1be569d330bffd6ca68503446723"
     },
     {
+      "path": "app/gridops-refresh.css",
+      "sha256": "09c3358d818664fc6ba12934ee7a58b54758f590ab9b17b048e7484cedbfed06"
+    },
+    {
+      "path": "app/gridops.css",
+      "sha256": "644085a1cc334f5b1bd5eab77c23d00119abe80b3a828575286a27e9ee80a2c5"
+    },
+    {
       "path": "app/gridops/caso/page.tsx",
       "sha256": "65f42ac14c46274c7df892c5818e699b262a95dd223662205efd3d31b69549cb"
     },
@@ -69,12 +86,16 @@
       "sha256": "01e46d4cd2cb69811131d9ffad6b6ea9db902031b3d5696b1262667812022087"
     },
     {
-      "path": "app/gridops.css",
-      "sha256": "644085a1cc334f5b1bd5eab77c23d00119abe80b3a828575286a27e9ee80a2c5"
+      "path": "app/layout.tsx",
+      "sha256": "30be0b16629bb9c8d27507c2b6d16d95cfc9ab75ec45acdc4939736ab1c5b7f4"
     },
     {
-      "path": "app/layout.tsx",
-      "sha256": "cbcdcc2b867b78ec7e597bcb8124438ef8ec8850846e2a4da4926e78bf7b9c82"
+      "path": "app/opsforge-refresh.css",
+      "sha256": "78ca3e15da2ea4dd1c09286d317e2a4b97bb81e4c9dc61bd63bfa058bbcbc16a"
+    },
+    {
+      "path": "app/opsforge.css",
+      "sha256": "1e26413294d7bb84bcd045a6cdd960866179284476365f7877b20d6acc25bca4"
     },
     {
       "path": "app/opsforge/caso/page.tsx",
@@ -83,10 +104,6 @@
     {
       "path": "app/opsforge/page.tsx",
       "sha256": "de8a5ef05b028a0c9c19dec5fa696625df92a9df8188c0758123064107dfd985"
-    },
-    {
-      "path": "app/opsforge.css",
-      "sha256": "1e26413294d7bb84bcd045a6cdd960866179284476365f7877b20d6acc25bca4"
     },
     {
       "path": "app/page.tsx",
@@ -101,8 +118,12 @@
       "sha256": "78ab12a3622151fb88b17a689097ecff18d7c6d69cbcd035d610f74fe0c5ea6d"
     },
     {
+      "path": "app/project-stories.css",
+      "sha256": "5110f8f5604629daea385c3585215d924ac99f3bd613224bc2ae1f5c93c5173b"
+    },
+    {
       "path": "app/tesis/page.tsx",
-      "sha256": "dd05366396c79ffee75be0fd85f2836fafd1e002cee58e734961f23ec7d31b81"
+      "sha256": "4d6e3d9eeabf26093b960fa1385fc26b3058420b1aa420340b4c9a61a85dfa7b"
     },
     {
       "path": "build/sites-vite-plugin.LICENSE",
@@ -117,20 +138,24 @@
       "sha256": "8b0eca84aa3364cc7ccc43cc3af6beb88dd34ebd410de08690bf094ce39fbcb0"
     },
     {
+      "path": "components.json",
+      "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd"
+    },
+    {
       "path": "components/data-table.tsx",
       "sha256": "0925614bc3d0b30eec685205162f6c479bd705d3dbd517c2e054e110d898bea5"
     },
     {
       "path": "components/gridops.tsx",
-      "sha256": "6f2325d2cc923304a9594375761e7a1ca975c9bd3a2c14d394a5d871d51692af"
+      "sha256": "78808f32973a8ee4919c1fc275c4282304c471a61787dfc7fe2dca93768a95b2"
     },
     {
       "path": "components/opsforge.tsx",
-      "sha256": "8e8230edfb2d544eaf31e9ab0531cf9c5d760a5f702a2c093dd67d5be9f127e2"
+      "sha256": "5b29916178478f5ee59c1eafb37262132a1f8f9b0c844d899af10ca120a91b42"
     },
     {
       "path": "components/portfolio.tsx",
-      "sha256": "ded8730b6f7fd637177799bd6de9f871471036396c60418d8703f4e2c211feff"
+      "sha256": "e85d1df6aa27687ed2f790a7ec6102866832a8f0ed7b904650ea4b9c2dfc98a5"
     },
     {
       "path": "components/quality.tsx",
@@ -142,7 +167,7 @@
     },
     {
       "path": "components/trend.tsx",
-      "sha256": "80db5b69c1433a7f84fe81683a51a251656e7dd796c7b91c0e991a777fc7947a"
+      "sha256": "758b0254c0817c542a1c0d7712ed6e7464a7b021629ac82bbf364ac6982a9a85"
     },
     {
       "path": "components/ui/accordion.tsx",
@@ -393,10 +418,6 @@
       "sha256": "1a62e44f3e220989ad4497937a89fee7c7d75022acc87c1afffec99450342409"
     },
     {
-      "path": "components.json",
-      "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd"
-    },
-    {
       "path": "data/raw/076acaf239d93f23859bf5013d828355389488e19b49113d3c4b7d09dfd69da4.csv",
       "sha256": "076acaf239d93f23859bf5013d828355389488e19b49113d3c4b7d09dfd69da4"
     },
@@ -413,16 +434,28 @@
       "sha256": "408439990e6242a3d5b73eacc6b544581db04b00f984a8770fb76fd4b754db77"
     },
     {
-      "path": "Dockerfile.pipeline",
-      "sha256": "609a8e46d163a5dd67f27f0526b504558ea1a817746535edc46969d1b6016597"
-    },
-    {
       "path": "docs/ARQUITECTURA.md",
       "sha256": "7aa7c5763469fe5c02216bcdf387364ccf213df4821ccbad28e3ea2932e36ea6"
     },
     {
       "path": "docs/INVESTIGACION.md",
       "sha256": "1fdcc618945e7c34fc8dfa44d27b033cf33c06f7a4bd4f3d9e0eeaf1f98fb86d"
+    },
+    {
+      "path": "docs/PLAN.md",
+      "sha256": "13de7e8f2ebde588ea1d8bc02580a0d28c9be6c3055b4e898d4f4c84d82fe276"
+    },
+    {
+      "path": "docs/PRD.md",
+      "sha256": "569b5332b96fae2eb3b38e93568e2a7c5621df3f2a75b5f1a7ebc1477800a627"
+    },
+    {
+      "path": "docs/PROMPT_MAESTRO.md",
+      "sha256": "6302eb2d473160733b6d538fe8e2ae2aaa060353bac44b9f34362be7d20c31fd"
+    },
+    {
+      "path": "docs/REVISAR_EN_5_MINUTOS.md",
+      "sha256": "bd6e7248b4cefd8e368ec6dc75eff4257cd8e16630857c3fd8e060b04e28e845"
     },
     {
       "path": "docs/opsforge/PLAN_PRD_ARQUITECTURA.md",
@@ -461,20 +494,8 @@
       "sha256": "2a10461b5982956f68b7eba1d65cf447d0caf89a798f1e9381ca872e47f04123"
     },
     {
-      "path": "docs/PLAN.md",
-      "sha256": "13de7e8f2ebde588ea1d8bc02580a0d28c9be6c3055b4e898d4f4c84d82fe276"
-    },
-    {
-      "path": "docs/PRD.md",
-      "sha256": "569b5332b96fae2eb3b38e93568e2a7c5621df3f2a75b5f1a7ebc1477800a627"
-    },
-    {
-      "path": "docs/PROMPT_MAESTRO.md",
-      "sha256": "6302eb2d473160733b6d538fe8e2ae2aaa060353bac44b9f34362be7d20c31fd"
-    },
-    {
-      "path": "docs/REVISAR_EN_5_MINUTOS.md",
-      "sha256": "bd6e7248b4cefd8e368ec6dc75eff4257cd8e16630857c3fd8e060b04e28e845"
+      "path": "docs/validation/VALIDACION.md",
+      "sha256": "85389bd66afd3f4cb260f5424cd0b9003258ba2351e79ad64946e6f8d2751fb9"
     },
     {
       "path": "docs/validation/http-checks.json",
@@ -485,8 +506,8 @@
       "sha256": "54fcf87259759bf4e54b2135323c073db2fa8d89fb6bfee0013f177ff7dc11a9"
     },
     {
-      "path": "docs/validation/VALIDACION.md",
-      "sha256": "85389bd66afd3f4cb260f5424cd0b9003258ba2351e79ad64946e6f8d2751fb9"
+      "path": "drizzle.config.ts",
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b"
     },
     {
       "path": "drizzle/0000_outstanding_franklin_richards.sql",
@@ -499,10 +520,6 @@
     {
       "path": "drizzle/meta/_journal.json",
       "sha256": "d5ae6afc3714c5ef8dbc5849354a22fbb4ecf8a4ec4c63971a6cb2ed6c1be3c1"
-    },
-    {
-      "path": "drizzle.config.ts",
-      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b"
     },
     {
       "path": "eslint.config.mjs",
@@ -547,6 +564,14 @@
     {
       "path": "next.config.ts",
       "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc"
+    },
+    {
+      "path": "opsforge/Dockerfile",
+      "sha256": "66699319919bc28e3adcca6acd523659e9bec9980ba1e20a7b145e769693a41f"
+    },
+    {
+      "path": "opsforge/README.md",
+      "sha256": "ee1e0e8b3a71f2dff3e1e06b40a05f755e828c48f3c2830942cb6cfb7297797f"
     },
     {
       "path": "opsforge/__init__.py",
@@ -597,10 +622,6 @@
       "sha256": "2d6750babd1dcf220c0f699e3961891abac1650d75cdf74a72355ed0053d1fef"
     },
     {
-      "path": "opsforge/Dockerfile",
-      "sha256": "66699319919bc28e3adcca6acd523659e9bec9980ba1e20a7b145e769693a41f"
-    },
-    {
       "path": "opsforge/expected.json",
       "sha256": "40d5657e42115d30d7161b994e9bac0c4274357e7dd6c081ce4e4ef0021b4035"
     },
@@ -611,10 +632,6 @@
     {
       "path": "opsforge/pipeline.py",
       "sha256": "34058734992685cd183c23a2824810f8388c720308d25c6d46e2cd0c7369febc"
-    },
-    {
-      "path": "opsforge/README.md",
-      "sha256": "ee1e0e8b3a71f2dff3e1e06b40a05f755e828c48f3c2830942cb6cfb7297797f"
     },
     {
       "path": "opsforge/reconciliation.sql",
@@ -702,11 +719,11 @@
     },
     {
       "path": "public/images/gridops-preview.png",
-      "sha256": "8cfc2482cf9a0eb53912b1791dd55126a07839d75207cd5904c8992f736d1ac4"
+      "sha256": "635194613bd30c76ebf07ff19b6aa28201cfe92b14533199beaa8081b1d0b00a"
     },
     {
       "path": "public/images/opsforge-preview.png",
-      "sha256": "366b91e3cd41e65be50c59a4a2999a2657a033644b43b9b1a39defec3084834b"
+      "sha256": "74439ac68e8aa78cdd0226d815e6fa8f774c970be324d1c7619ca6eeafcb7fd0"
     },
     {
       "path": "public/images/social-card.png",
@@ -731,10 +748,6 @@
     {
       "path": "public/opsforge/fixtures/schema-32d735dd8e2e.csv",
       "sha256": "32d735dd8e2e8ff3a747874d537f322cec7ab0032efb57f0b597a595f38d67fc"
-    },
-    {
-      "path": "README.md",
-      "sha256": "74e95e82cbfddde663ddad9fb2cdad006ef0c9e72f46b18d1d1c9e84a7e64285"
     },
     {
       "path": "scripts/build-verified.sh",
@@ -793,17 +806,16 @@
       "sha256": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4"
     },
     {
-      "path": "vendor/shadcn-tailwind-4.13.0.css",
-      "sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a"
-    },
-    {
       "path": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
       "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f"
+    },
+    {
+      "path": "vendor/shadcn-tailwind-4.13.0.css",
+      "sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a"
     },
     {
       "path": "vite.config.ts",
       "sha256": "532c2ec2951fd32a9a7720f6297a62232020ab7ee6c1519cbb80089d89e37375"
     }
-  ],
-  "hash_basis": "Git blob bytes (LF normalization), excludes this manifest"
+  ]
 }

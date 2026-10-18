@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import {
   ArrowLeft,
+  ArrowRight,
   ArrowUpRight,
   BookOpen,
   CalendarDays,
+  Globe2,
   Network,
   ShieldCheck,
 } from "lucide-react";
@@ -16,192 +18,345 @@ export const metadata: Metadata = {
 
 export default function CeicCase() {
   return (
-    <div className="case-page thesis-page ceic-page">
+    <div className="case-page thesis-page project-story story-portal">
       <a className="skip" href="#ceic-main">
         Saltar al proyecto
       </a>
-      <header className="portfolio-nav">
-        <a className="identity" href="/">
-          <span className="monogram">
-            SC<span>·</span>
+      <header className="story-nav">
+        <a className="story-identity" href="/">
+          <span className="story-monogram">sc.</span>
+          <span>
+            Sebastián Cortés<small>PORTAFOLIO / PROYECTOS</small>
           </span>
-          <span>Sebastián Cortés</span>
         </a>
-        <a className="pf-text-action" href="https://ceicucn.cl/">
-          ceicucn.cl <ArrowUpRight size={16} />
+        <a className="story-nav-link" href="https://ceicucn.cl/">
+          Ver portal <ArrowUpRight size={16} />
         </a>
       </header>
-      <main className="case-content" id="ceic-main">
-        <a className="text-link" href="/#ceic">
-          <ArrowLeft size={16} /> Volver al portafolio
+      <main className="story-content" id="ceic-main">
+        <a className="story-back" href="/#proyecto">
+          <ArrowLeft size={14} /> Todos los proyectos
         </a>
-        <div className="thesis-heading-meta">
-          <p className="eyebrow">04 / PRODUCTO WEB · COMUNIDAD UNIVERSITARIA</p>
-          <span className="thesis-progress">Portal publicado</span>
+        <div className="story-meta">
+          <p>04 / PRODUCTO WEB · INGENIERÍA CIVIL UCN</p>
+          <span>
+            <i /> Portal publicado
+          </span>
         </div>
-        <h1>
-          Portal CEIC UCN.
-          <br />
-          La vida académica, conectada.
-        </h1>
-        <p className="case-lead">
-          Un punto de acceso al calendario, las mallas y el material de
-          Ingeniería Civil UCN. Un proyecto que une organización de información,
-          desarrollo web y gestión de contenidos para estudiantes y CEAL.
-        </p>
-        <div className="case-stack">
-          JavaScript · HTML / CSS · Node.js · Supabase · Google OAuth · GitHub
-          Pages
+        <div className="story-hero">
+          <div className="story-hero-copy">
+            <p className="story-kicker">PORTAL CEIC UCN</p>
+            <h1>
+              La información de la carrera,
+              <br />
+              <em>en un solo lugar.</em>
+            </h1>
+            <p className="story-lead">
+              Calendario, mallas y material de estudio para estudiantes y CEAL
+              de Ingeniería Civil UCN.
+            </p>
+            <p className="story-intro">
+              Un producto web que reúne consultas cotidianas y conecta
+              información académica con una experiencia de acceso público.
+            </p>
+            <a className="story-button" href="https://ceicucn.cl/">
+              Explorar el portal <ArrowUpRight size={17} />
+            </a>
+          </div>
+          <figure className="story-product-map">
+            <div className="story-map-top">
+              <Globe2 size={16} />
+              <span>CEIC UCN</span>
+              <span>MAPA DEL PRODUCTO</span>
+            </div>
+            <div className="story-map-center">
+              <span>Comunidad de Ingeniería Civil</span>
+              <strong>
+                Una entrada.
+                <br />
+                Tres consultas habituales.
+              </strong>
+            </div>
+            <div className="story-map-services">
+              <div>
+                <CalendarDays size={21} />
+                <strong>¿Qué viene?</strong>
+                <span>Calendario académico</span>
+              </div>
+              <div>
+                <Network size={21} />
+                <strong>¿Qué sigue?</strong>
+                <span>Mallas y prerrequisitos</span>
+              </div>
+              <div>
+                <BookOpen size={21} />
+                <strong>¿Dónde estudio?</strong>
+                <span>Biblioteca por asignatura</span>
+              </div>
+            </div>
+            <div className="story-map-access">
+              <ShieldCheck size={16} />
+              <span>
+                Consulta como invitado · Gestión con acceso autorizado
+              </span>
+            </div>
+            <figcaption>
+              Esquema de las funciones del portal. La aplicación real está
+              disponible en ceicucn.cl.
+            </figcaption>
+          </figure>
         </div>
-        <a
-          className="pf-text-action ceic-lead-action"
-          href="https://ceicucn.cl/"
-        >
-          Explorar el portal publicado <ArrowUpRight size={18} />
-        </a>
-        <dl className="ceic-overview">
+        <dl className="story-facts">
           <div>
-            <dt>Comunidad</dt>
-            <dd>Estudiantes y CEAL de Ingeniería Civil UCN</dd>
+            <dt>CONTEXTO</dt>
+            <dd>Comunidad universitaria</dd>
           </div>
           <div>
-            <dt>Acceso público</dt>
-            <dd>Consulta como invitado, sin una cuenta UCN</dd>
+            <dt>DESARROLLO</dt>
+            <dd>Producto web con apoyo de IA</dd>
           </div>
           <div>
-            <dt>Alcance</dt>
-            <dd>Producto web e integración de servicios</dd>
+            <dt>ACCESO</dt>
+            <dd>Consulta pública como invitado</dd>
+          </div>
+          <div>
+            <dt>PUBLICACIÓN</dt>
+            <dd>
+              <a href="https://ceicucn.cl/">
+                ceicucn.cl <ArrowUpRight size={13} />
+              </a>
+            </dd>
           </div>
         </dl>
-        <section>
-          <h2>El servicio</h2>
-          <p>
-            La experiencia reúne consultas habituales de la carrera: revisar
-            fechas, entender la secuencia de asignaturas y encontrar material de
-            estudio. La navegación mantiene esas tareas disponibles tanto en
-            escritorio como en móvil.
-          </p>
-          <div className="thesis-capabilities">
+        <section
+          className="story-section story-split"
+          aria-labelledby="ceic-need"
+        >
+          <div>
+            <p className="story-section-number">01 / LA NECESIDAD</p>
+            <h2 id="ceic-need">
+              Menos búsqueda.
+              <br />
+              Más contexto.
+            </h2>
+          </div>
+          <div className="story-section-copy">
+            <p>
+              Fechas, planes de estudio y recursos responden preguntas
+              distintas, pero pertenecen a una misma experiencia académica. El
+              portal los organiza por tareas y asignaturas, con navegación tanto
+              en escritorio como en móvil.
+            </p>
+            <p>
+              El trabajo combina estructura de información, interfaz,
+              integración de servicios y mantenimiento de una aplicación
+              publicada.
+            </p>
+          </div>
+        </section>
+        <section className="story-section" aria-labelledby="ceic-service">
+          <div className="story-section-heading">
+            <div>
+              <p className="story-section-number">02 / EL PRODUCTO</p>
+              <h2 id="ceic-service">De la consulta al detalle.</h2>
+            </div>
+            <p>
+              Cuatro funciones concretas, con el acceso adecuado para cada
+              tarea.
+            </p>
+          </div>
+          <div className="story-feature-grid">
             {[
               {
                 Icon: CalendarDays,
                 title: "Calendario académico",
-                text: "Fechas, eventos y acuerdos reunidos en una vista navegable, con detalle de cada actividad.",
+                text: "Fechas, eventos y acuerdos en una vista navegable. Cada actividad tiene su propio detalle.",
+                tag: "ORGANIZAR EL SEMESTRE",
               },
               {
                 Icon: Network,
                 title: "Mallas interactivas",
-                text: "Planes O y P, organización por semestre, prerrequisitos y relación entre asignaturas y recursos.",
+                text: "Planes O y P por semestre, con prerrequisitos y relaciones entre asignaturas y recursos.",
+                tag: "ENTENDER EL RECORRIDO",
               },
               {
                 Icon: BookOpen,
                 title: "Biblioteca por asignatura",
-                text: "Búsqueda y filtros sobre un catálogo de material académico, con asociación al ramo y acceso a los recursos.",
+                text: "Búsqueda y filtros en un catálogo de materiales, asociados al código y nombre de cada ramo.",
+                tag: "ENCONTRAR MATERIAL",
               },
               {
                 Icon: ShieldCheck,
                 title: "Acceso según el rol",
                 text: "Consulta como invitado, ingreso institucional con Google y permisos de gestión diferenciados para CEAL.",
+                tag: "SEPARAR CONSULTA Y GESTIÓN",
               },
-            ].map(({ Icon, title, text }) => (
+            ].map(({ Icon, title, text, tag }) => (
               <article key={title}>
-                <Icon size={22} />
+                <Icon size={23} />
+                <p className="story-feature-tag">{tag}</p>
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>
             ))}
           </div>
         </section>
-        <section>
-          <h2>De los archivos al servicio</h2>
-          <ol className="thesis-pipeline">
-            {[
-              [
-                "01",
-                "Organizar la información",
-                "Normalización de las mallas y sus prerrequisitos. Scripts de importación y construcción del catálogo de materiales, asociados a códigos y nombres de asignaturas.",
-              ],
-              [
-                "02",
-                "Construir la experiencia",
-                "Interfaz JavaScript con navegación por secciones, filtros, vistas de detalle, temas claro y oscuro y adaptación a pantallas pequeñas.",
-              ],
-              [
-                "03",
-                "Integrar acceso y persistencia",
-                "Frontend en GitHub Pages, API Node.js en Render y estado compartido en Supabase. Verificación de identidad Google y autorización de las acciones internas desde el servidor.",
-              ],
-              [
-                "04",
-                "Mantener la publicación",
-                "Control de versiones, publicación por GitHub Actions y pruebas de navegación, permisos y recuperación de almacenamiento. Atención al foco, el contraste y la conservación del desplazamiento.",
-              ],
-            ].map(([number, title, text]) => (
-              <li key={number}>
-                <span>{number}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
-              </li>
-            ))}
+        <section className="story-section" aria-labelledby="ceic-architecture">
+          <div className="story-section-heading">
+            <div>
+              <p className="story-section-number">03 / LA CONSTRUCCIÓN</p>
+              <h2 id="ceic-architecture">Información, interfaz y servicios.</h2>
+            </div>
+            <p>
+              Una arquitectura que distingue la consulta pública de las
+              operaciones internas.
+            </p>
+          </div>
+          <figure className="story-architecture">
+            <div className="story-architecture-lane">
+              <div>
+                <span>EXPERIENCIA</span>
+                <strong>Frontend</strong>
+                <p>JavaScript · HTML / CSS</p>
+                <small>GitHub Pages</small>
+              </div>
+              <ArrowRight
+                className="story-flow-arrow"
+                size={23}
+                aria-hidden="true"
+              />
+              <div>
+                <span>LÓGICA Y PERMISOS</span>
+                <strong>API</strong>
+                <p>Node.js · Identidad Google</p>
+                <small>Render</small>
+              </div>
+              <ArrowRight
+                className="story-flow-arrow"
+                size={23}
+                aria-hidden="true"
+              />
+              <div>
+                <span>ESTADO COMPARTIDO</span>
+                <strong>Persistencia</strong>
+                <p>Datos de la aplicación</p>
+                <small>Supabase</small>
+              </div>
+            </div>
+            <figcaption>
+              Esquema de servicios. La identidad y la autorización de acciones
+              internas se verifican desde el servidor.
+            </figcaption>
+          </figure>
+          <div className="story-build-grid">
+            <article>
+              <span>01</span>
+              <h3>Dar estructura a los datos</h3>
+              <p>
+                Normalización de mallas y prerrequisitos; scripts de importación
+                y construcción del catálogo de materiales.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Resolver la experiencia</h3>
+              <p>
+                Navegación, filtros, vistas de detalle, temas claro y oscuro y
+                adaptación a pantallas pequeñas.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Publicar y mantener</h3>
+              <p>
+                Control de versiones y publicación con GitHub Actions. Revisión
+                de navegación, permisos, almacenamiento, foco y contraste.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section
+          className="story-section story-tour"
+          aria-labelledby="ceic-tour"
+        >
+          <div>
+            <p className="story-section-number">04 / RECORRIDO SUGERIDO</p>
+            <h2 id="ceic-tour">Pruébalo como invitado.</h2>
+            <p>
+              No necesitas una cuenta UCN para conocer las funciones públicas.
+              La gestión interna requiere una cuenta autorizada.
+            </p>
+            <a className="story-button" href="https://ceicucn.cl/">
+              Abrir ceicucn.cl <ArrowUpRight size={17} />
+            </a>
+          </div>
+          <ol>
+            <li>
+              <span>01</span>
+              <p>Compara los planes O y P en las mallas.</p>
+            </li>
+            <li>
+              <span>02</span>
+              <p>Abre una asignatura y busca material relacionado.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p>Consulta una actividad del calendario.</p>
+            </li>
           </ol>
         </section>
-        <section>
-          <h2>Qué demuestra en este portafolio</h2>
-          <p>
-            Capacidad de llevar una necesidad de una comunidad a una aplicación
-            publicada: modelar información, integrar servicios, separar acceso
-            público y gestión interna, desplegar cambios y corregir problemas de
-            uso.
-          </p>
-          <p>
-            Para un rol de datos, el vínculo está en la normalización del
-            catálogo y las mallas, sus relaciones y los scripts de integración.
-            El proyecto también aporta experiencia práctica de desarrollo y
-            mantenimiento web.
-          </p>
+        <section
+          className="story-section story-split story-scope"
+          aria-labelledby="ceic-evidence"
+        >
+          <div>
+            <p className="story-section-number">EVIDENCIA Y ALCANCE</p>
+            <h2 id="ceic-evidence">
+              Un producto publicado.
+              <br />
+              Una implementación visible.
+            </h2>
+          </div>
+          <div className="story-section-copy">
+            <p>
+              El desarrollo contó con apoyo de IA. La implementación permite
+              revisar la organización de información, las integraciones y el
+              funcionamiento de una aplicación para una comunidad. Para un rol
+              de datos, el vínculo está en el catálogo, las relaciones de las
+              mallas y los scripts de integración.
+            </p>
+            <p>
+              Esta presentación describe funciones y arquitectura. No atribuye
+              cifras de usuarios activos, impacto medido ni una relación
+              laboral.
+            </p>
+            <p className="story-review">
+              Contenido y documentación revisados el 14 de septiembre de 2026.
+              Portal y endpoint público de salud de la API accesibles en esa
+              revisión.
+            </p>
+          </div>
         </section>
-        <section>
-          <h2>Recorrido para conocerlo</h2>
-          <p>
-            Abre el portal e ingresa como invitado. Compara los planes O y P,
-            revisa una asignatura y busca material relacionado. Después consulta
-            un evento del calendario. La gestión interna requiere una cuenta
-            autorizada.
-          </p>
-          <p>
-            El portal continúa evolucionando. Esta presentación describe sus
-            funciones y arquitectura; no atribuye cifras de usuarios activos,
-            impacto medido ni una relación laboral.
-          </p>
-          <p className="thesis-review-date">
-            Contenido y documentación revisados el 14 de septiembre de 2026.
-            Portal y endpoint público de salud de la API accesibles en la
-            revisión.
-          </p>
-          <a className="pf-text-action" href="https://ceicucn.cl/">
-            Visitar ceicucn.cl <ArrowUpRight size={18} />
-          </a>
-        </section>
-        <nav className="thesis-next" aria-label="Otros proyectos">
+        <nav className="story-next" aria-label="Otros proyectos">
           <a href="/opsforge/caso">
-            <span>OPERACIONES</span>
+            <span>CONCILIACIÓN DE DATOS</span>
             <strong>
-              OpsForge <ArrowUpRight size={18} />
+              OpsForge <ArrowUpRight size={21} />
             </strong>
           </a>
-          <a href="/gridops/caso">
-            <span>ENERGÍA</span>
+          <a href="/tesis">
+            <span>SIMULACIÓN Y DATOS</span>
             <strong>
-              GridOps <ArrowUpRight size={18} />
+              SPH-IncipientMotion <ArrowUpRight size={21} />
             </strong>
           </a>
         </nav>
       </main>
-      <footer className="portfolio-footer">
+      <footer className="story-footer">
         <span>Sebastián Cortés · Ingeniería Civil UCN, último año</span>
-        <a href="/">Volver al portafolio →</a>
+        <a href="/">
+          Volver al portafolio <ArrowUpRight size={14} />
+        </a>
       </footer>
     </div>
   );

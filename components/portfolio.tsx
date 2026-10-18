@@ -189,10 +189,9 @@ export default function Portfolio() {
                 Cuando un pedido y su factura no coinciden.
               </p>
               <p>
-                Conciliación de pedidos, facturas y entregas. Construí un
-                pipeline que conserva el origen de cada documento y permite
-                repetir una carga, corregirla o rechazarla sin duplicar
-                registros.
+                Conciliación de pedidos, facturas y entregas. Un flujo de datos
+                que conserva el origen de cada documento y permite repetir una
+                carga, corregirla o rechazarla sin duplicar registros.
               </p>
               <ul>
                 <li>Ingesta y conciliación con Python, PostgreSQL y dbt.</li>
@@ -204,7 +203,7 @@ export default function Portfolio() {
                   Probar la demo <ArrowUpRight size={17} />
                 </a>
                 <a className="studio-link" href="/opsforge/caso">
-                  Cómo lo construí <ArrowRight size={16} />
+                  Ver el caso técnico <ArrowRight size={16} />
                 </a>
               </div>
             </div>
@@ -223,7 +222,7 @@ export default function Portfolio() {
                 src="/images/opsforge-preview.png"
                 alt="Interfaz real de OpsForge: estado de conciliación de pedidos y documentos"
                 width="1200"
-                height="820"
+                height="900"
                 loading="lazy"
               />
               <span className="studio-image-caption">
@@ -241,9 +240,9 @@ export default function Portfolio() {
                 De un CSV oficial a una consulta útil.
               </p>
               <p>
-                Un explorador de generación eléctrica de Chile. Preparé los
-                datos con Python y DuckDB, conservé su trazabilidad y los
-                conecté a una API y una interfaz para comparar y descargar
+                Un explorador de generación eléctrica de Chile. Procesa los
+                datos con Python y DuckDB, conserva su trazabilidad y los
+                conecta a una API y una interfaz para comparar y descargar
                 resultados.
               </p>
               <div className="studio-project-facts">
@@ -266,7 +265,7 @@ export default function Portfolio() {
                   Explorar los datos <ArrowUpRight size={17} />
                 </a>
                 <a className="studio-link" href="/gridops/caso">
-                  Cómo lo construí <ArrowRight size={16} />
+                  Ver el caso técnico <ArrowRight size={16} />
                 </a>
               </div>
             </div>
@@ -285,7 +284,7 @@ export default function Portfolio() {
                 src="/images/gridops-preview.png"
                 alt="Interfaz real de GridOps con filtros, series de generación eléctrica y controles de cobertura"
                 width="1200"
-                height="820"
+                height="900"
                 loading="lazy"
               />
               <span className="studio-image-caption">
@@ -332,7 +331,7 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="studio-more-grid">
-            <article>
+            <article id="tesis">
               <p className="studio-project-meta">
                 INVESTIGACIÓN ACADÉMICA · EN DESARROLLO
               </p>
@@ -349,7 +348,7 @@ export default function Portfolio() {
                 Conocer la investigación <ArrowUpRight size={16} />
               </a>
             </article>
-            <article>
+            <article id="ceic">
               <p className="studio-project-meta">
                 PRODUCTO WEB · COMUNIDAD UNIVERSITARIA
               </p>
@@ -411,12 +410,12 @@ export default function Portfolio() {
             <div>
               <span>LO QUE BUSCO</span>
               <p>
-                Primera experiencia profesional remunerada, remota desde Chile,
-                con horario compatible con mis clases.
+                Primera experiencia profesional remunerada, en español y remota
+                desde Chile, con horario compatible con mis clases.
               </p>
             </div>
             <p className="studio-assistance">
-              Uso herramientas de IA como apoyo de desarrollo. En los casos
+              Estos proyectos se desarrollan con asistencia de IA. En los casos
               técnicos explico qué está implementado, qué se ha probado y qué
               sigue pendiente.
             </p>

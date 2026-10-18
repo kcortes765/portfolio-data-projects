@@ -48,11 +48,15 @@ export function Trend({
               x2="0"
               y2="1"
             >
-              <stop offset="0%" stopColor="#2455e8" stopOpacity={0.17} />
-              <stop offset="100%" stopColor="#2455e8" stopOpacity={0} />
+              <stop offset="0%" stopColor="#294e46" stopOpacity={0.14} />
+              <stop offset="100%" stopColor="#294e46" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid stroke="#e8ecf1" vertical={false} />
+          <CartesianGrid
+            stroke="#e8e9e2"
+            strokeDasharray="3 4"
+            vertical={false}
+          />
           <XAxis
             dataKey="period"
             tickFormatter={(p) => monthLabel(p, data.length > 12)}
@@ -79,8 +83,8 @@ export function Trend({
                   : "ERNC",
             ]}
             contentStyle={{
-              border: "1px solid #dfe4ec",
-              borderRadius: 10,
+              border: "1px solid #d9ded5",
+              borderRadius: 5,
               fontSize: 14,
             }}
           />
@@ -88,7 +92,7 @@ export function Trend({
             type="linear"
             dataKey="total"
             name="total"
-            stroke="#2455e8"
+            stroke="#294e46"
             fill={`url(#${compact ? "hero-fill" : "chart-fill"})`}
             strokeWidth={2.5}
             isAnimationActive={false}
@@ -97,7 +101,7 @@ export function Trend({
             type="linear"
             dataKey="ernc"
             name="ernc"
-            stroke="#168260"
+            stroke="#ad4529"
             fill="transparent"
             strokeWidth={2}
             isAnimationActive={false}

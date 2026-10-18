@@ -4,6 +4,9 @@ import "./gridops.css";
 import "./opsforge.css";
 import "./portfolio.css";
 import "./portfolio-home.css";
+import "./gridops-refresh.css";
+import "./opsforge-refresh.css";
+import "./project-stories.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(

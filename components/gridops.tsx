@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   FileText,
   RotateCcw,
+  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NativeSelect } from "@/components/ui/native-select";
@@ -96,8 +97,12 @@ export default function GridOps({
       </a>
       <aside className="sidebar">
         <a className="gridops-word app-logo" href="/gridops">
-          Grid<span>Ops</span>
-          <small>CHILE ENERGY EXPLORER</small>
+          <span className="gridops-mark">
+            <Zap size={21} strokeWidth={1.7} />
+          </span>
+          <span className="gridops-brand">
+            GridOps<small>GENERACIÓN ELÉCTRICA</small>
+          </span>
         </a>
         <div className="sidebar-section">EXPLORADOR</div>
         <nav aria-label="GridOps">
@@ -114,6 +119,17 @@ export default function GridOps({
             <FileText size={19} /> Sobre el proyecto
           </a>
         </nav>
+        <div className="sidebar-source">
+          <span>LA FUENTE</span>
+          <strong>Energía Abierta</strong>
+          <p>
+            Una captura de la serie oficial de la CNE, con sus observaciones a
+            la vista.
+          </p>
+          <a href="#quality">
+            Ver procedencia <ArrowUpRight size={14} />
+          </a>
+        </div>
         <div className="sidebar-bottom">
           <p>
             Un proyecto de
@@ -121,14 +137,15 @@ export default function GridOps({
             <strong>Sebastián Cortés</strong>
           </p>
           <a href="/">
-            <ArrowLeft size={15} /> Volver al portfolio
+            <ArrowLeft size={15} /> Volver al portafolio
           </a>
         </div>
       </aside>
       <div className="app-main">
         <header className="app-topbar">
           <span>
-            Proyecto / <strong>GridOps</strong>
+            PORTAFOLIO <span className="topbar-divider">/</span>{" "}
+            <strong>Explorador de energía</strong>
           </span>
           <a href={dataset.source.catalog} target="_blank" rel="noreferrer">
             Fuente oficial <ArrowUpRight size={15} />
@@ -138,9 +155,9 @@ export default function GridOps({
           <div className="workspace-heading">
             <div>
               <p className="eyebrow">SISTEMA ELÉCTRICO · CHILE</p>
-              <h1>La energía, en perspectiva.</h1>
+              <h1>Generación eléctrica en Chile</h1>
               <p>
-                Explora cómo evoluciona la generación eléctrica por tecnología.
+                Del dato público a una lectura por mes, tecnología y origen.
               </p>
             </div>
             <Button
@@ -157,11 +174,15 @@ export default function GridOps({
             <span>
               Datos hasta{" "}
               <strong>{monthLabel(dataset.quality.last_period)}</strong> ·
-              Revisión en CSV: {dateLabel(dataset.source.source_updated)} ·
+              Revisión del CSV: {dateLabel(dataset.source.source_updated)} ·
               Captura: {dateLabel(dataset.source.retrieved_at)}
             </span>
           </div>
           <section className="filter-panel" aria-label="Filtros">
+            <div className="filter-heading">
+              <h2>Define tu consulta</h2>
+              <span>Los filtros actualizan gráficos, indicadores y CSV.</span>
+            </div>
             <div className="filter-controls">
               <label>
                 Desde
@@ -241,7 +262,7 @@ export default function GridOps({
                   }))
                 }
               >
-                Últimos 12 meses
+                12 meses de la captura
               </Button>
               <Button
                 variant="ghost"
@@ -288,7 +309,9 @@ export default function GridOps({
             <>
               <section className="kpi-grid" aria-label="Resumen del período">
                 <article>
-                  <span>Generación del período</span>
+                  <span>
+                    <Zap size={15} /> Generación del período
+                  </span>
                   <strong>
                     {format(total / 1000, 1)} <small>GWh</small>
                   </strong>
@@ -302,7 +325,7 @@ export default function GridOps({
                     {total ? format((ernc / total) * 100, 1) : "—"}{" "}
                     <small>%</small>
                   </strong>
-                  <p>Clasificación informada por la CNE</p>
+                  <p>Renovables no convencionales según la CNE</p>
                 </article>
                 <article>
                   <span>Variación interanual</span>
@@ -325,6 +348,48 @@ export default function GridOps({
                   </p>
                 </article>
               </section>
+              <div className="query-summary" aria-label="Consulta activa">
+                <span>
+                  {monthLabel(filters.start)} — {monthLabel(filters.end)}
+                </span>
+                <span>
+                  {filters.technology === "all"
+                    ? "Todas las tecnologías"
+                    : filters.technology}
+                </span>
+                <span>
+                  {filters.subsystem === "all"
+                    ? "SIC + SING"
+                    : filters.subsystem}
+                </span>
+                <span>
+                  {filters.classification === "all"
+                    ? "Todas las clasificaciones"
+                    : filters.classification}
+                </span>
+              </div>
+              <div className="selection-reading" role="status">
+                <span className="reading-label">EN ESTA SELECCIÓN</span>
+                <p>
+                  <strong>
+                    {technologies[0]?.name ?? "Sin tecnología dominante"}
+                  </strong>
+                  {technologies[0] && total > 0 ? (
+                    <>
+                      {" "}
+                      aporta el {format(
+                        (technologies[0].mwh / total) * 100,
+                        1,
+                      )}{" "}
+                      % de la generación.{" "}
+                    </>
+                  ) : (
+                    ". "
+                  )}
+                  {baseSeries.length} meses con datos · {format(rows.length)}{" "}
+                  filas agregadas.
+                </p>
+              </div>
               <section className="chart-grid">
                 <article className="data-card trend-card">
                   <div className="card-heading">
@@ -334,11 +399,11 @@ export default function GridOps({
                     </div>
                     <div className="legend">
                       <span>
-                        <i className="blue" />
+                        <i className="total-color" />
                         Total
                       </span>
                       <span>
-                        <i className="green" />
+                        <i className="ernc-color" />
                         ERNC
                       </span>
                       {showPrevious && (
@@ -360,14 +425,19 @@ export default function GridOps({
                   <Trend data={series} compare={showPrevious} />
                   <div className="card-footnote">
                     ERNC es un subconjunto del total. Incluye las tecnologías
-                    clasificadas como no convencionales por la fuente.
+                    clasificadas como no convencionales por la fuente. Los meses
+                    ausentes permanecen como vacíos.
+                    <a href="#quality">
+                      {" "}
+                      Ver criterios y observaciones <ArrowUpRight size={12} />
+                    </a>
                   </div>
                 </article>
                 <article className="data-card mix-card">
                   <div className="card-heading">
                     <div>
-                      <h2>Mix de generación</h2>
-                      <p>Contribución al período seleccionado</p>
+                      <h2>Composición de la generación</h2>
+                      <p>Generación por tecnología · GWh</p>
                     </div>
                   </div>
                   <div className="mix-list">
@@ -385,16 +455,19 @@ export default function GridOps({
                               width: `${Math.max(0, (t.mwh / (technologies[0]?.mwh || 1)) * 100)}%`,
                               background:
                                 i === 0
-                                  ? "#2455e8"
+                                  ? "#294e46"
                                   : i === 1
-                                    ? "#168260"
-                                    : "#8ea5d8",
+                                    ? "#ad4529"
+                                    : "#7e968a",
                             }}
                           />
                         </div>
                       </div>
                     ))}
                   </div>
+                  <p className="mix-note">
+                    Longitud relativa a la tecnología con mayor generación.
+                  </p>
                 </article>
               </section>
               <DataTable
@@ -407,7 +480,7 @@ export default function GridOps({
           <Quality />
           <footer className="app-footer">
             <a href="/" className="text-link">
-              Portfolio de Sebastián Cortés
+              Portafolio de Sebastián Cortés
             </a>
             <span>CNE / Coordinador Eléctrico Nacional · CC BY</span>
           </footer>

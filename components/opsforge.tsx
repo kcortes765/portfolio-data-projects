@@ -14,6 +14,8 @@ import {
   Database,
   ChevronRight,
   Search,
+  ShieldCheck,
+  ArrowDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -170,30 +172,49 @@ export default function OpsForge() {
             <Layers size={23} />
           </span>
           Ops<span>Forge</span>
-          <small>OPERACIONES</small>
+          <small>CONCILIACIÓN DOCUMENTAL</small>
         </a>
         <div className="of-header-links">
+          <span className="of-environment">
+            <span />
+            Demo interactiva
+          </span>
           <a href="/opsforge/caso">
             Caso técnico <ArrowUpRight size={15} />
           </a>
           <a href="/">
-            Portfolio <ArrowUpRight size={15} />
+            Portafolio <ArrowUpRight size={15} />
           </a>
         </div>
       </header>
       <div className="of-page">
+        <div className="of-context">
+          <span>
+            Espacio de trabajo <ChevronRight size={13} /> Conciliación
+          </span>
+          <span>
+            <ShieldCheck size={14} /> Datos sintéticos · espacio aislado
+          </span>
+        </div>
         <div className="of-heading">
           <div>
-            <p className="of-eyebrow">PEDIDOS · FACTURAS · ENTREGAS</p>
-            <h1>Cada diferencia, explicada.</h1>
-            <p>Concilia documentos y sigue cada resultado hasta su origen.</p>
+            <p className="of-eyebrow">PEDIDOS / FACTURAS / ENTREGAS</p>
+            <h1>
+              Cada diferencia, <span>explicada.</span>
+            </h1>
+            <p>
+              Revisa las diferencias. Encuentra el documento que las explica.
+            </p>
           </div>
           <div className="of-state-label">
-            <span className="of-tag">DATOS SINTÉTICOS</span>
+            <span className={`of-tag ${ready ? "of-tag-ready" : ""}`}>
+              <span />
+              {ready ? "ESPACIO ACTIVO" : "LISTO PARA COMENZAR"}
+            </span>
             <span>
               {ready
-                ? `Espacio guardado · revisión ${data.space.revision}`
-                : "Tu espacio de trabajo aislado"}
+                ? `Revisión ${data.space.revision} · ${data.runs.length} ${data.runs.length === 1 ? "corrida" : "corridas"}`
+                : "Primera carga · 24 pedidos de ejemplo"}
             </span>
           </div>
         </div>
@@ -203,16 +224,17 @@ export default function OpsForge() {
               <Database size={21} />
             </div>
             <div>
-              <strong>Ingestión de documentos</strong>
+              <span className="of-control-step">01 / INGESTIÓN</span>
+              <strong>Procesar un lote</strong>
               <p>
                 {ready
-                  ? "Reprocesa, corrige o comprueba un fallo."
-                  : "Carga los archivos de ejemplo para comenzar."}
+                  ? "Elige un escenario y compara el resultado."
+                  : "Carga los documentos y explora el resultado."}
               </p>
             </div>
           </div>
           <label className="of-select-label">
-            <span>Operación</span>
+            <span>Escenario de procesamiento</span>
             <select
               aria-label="Operación a ejecutar"
               value={scenario}
@@ -248,6 +270,7 @@ export default function OpsForge() {
           </Button>
           <Button
             variant="outline"
+            className="of-refresh"
             onClick={refresh}
             disabled={busy || loading}
             aria-label="Actualizar espacio"
@@ -284,7 +307,7 @@ export default function OpsForge() {
           ) : !ready ? (
             <section className="of-welcome">
               <div>
-                <p className="of-eyebrow">UN FLUJO QUE PUEDES RECORRER</p>
+                <p className="of-eyebrow">TU PRIMER RECORRIDO</p>
                 <h2>Del archivo a una decisión.</h2>
                 <p>
                   El lote inicial reúne 24 pedidos ficticios y sus documentos.
@@ -293,20 +316,21 @@ export default function OpsForge() {
                 </p>
                 <ol>
                   <li>
-                    <strong>Carga y revisa.</strong> Cada documento queda
-                    identificado por archivo, fila y hash.
+                    <strong>Carga y revisa.</strong> Abre un pedido y sigue el
+                    importe hasta su archivo y fila de origen.
                   </li>
                   <li>
                     <strong>Repite el lote.</strong> Comprueba que las cifras no
                     se duplican.
                   </li>
                   <li>
-                    <strong>Interrumpe y recupera.</strong> Aplica después las
-                    llegadas y revisiones corregidas.
+                    <strong>Prueba una corrección.</strong> Aplica las llegadas
+                    tardías y compara los pedidos pendientes.
                   </li>
                 </ol>
               </div>
               <div className="of-flow" aria-label="Flujo de procesamiento">
+                <p className="of-flow-caption">DE LA FUENTE AL RESULTADO</p>
                 {[
                   "Archivos originales",
                   "Contrato y cuarentena",
@@ -316,7 +340,11 @@ export default function OpsForge() {
                   <div key={s}>
                     <span>0{i + 1}</span>
                     <strong>{s}</strong>
-                    {i < 3 && <ChevronRight size={18} />}
+                    {i < 3 ? (
+                      <ArrowDown size={17} />
+                    ) : (
+                      <CheckCircle2 size={17} />
+                    )}
                   </div>
                 ))}
                 <p>
@@ -327,6 +355,10 @@ export default function OpsForge() {
             </section>
           ) : (
             <>
+              <div className="of-section-label">
+                <span>02 / REVISIÓN</span>
+                <span>Estado actual del espacio</span>
+              </div>
               <section className="of-kpis" aria-label="Resumen de conciliación">
                 <div>
                   <span>Pedidos</span>
@@ -345,7 +377,9 @@ export default function OpsForge() {
                   <span>Por resolver</span>
                   <strong className="of-orange">{data.summary.open}</strong>
                   <small>
-                    {data.orphans.length} documentos sin pedido, por separado
+                    {data.orphans.length}{" "}
+                    {data.orphans.length === 1 ? "documento" : "documentos"} sin
+                    pedido, por separado
                   </small>
                 </div>
                 <div>
@@ -368,15 +402,21 @@ export default function OpsForge() {
                   >
                     <Icon size={17} />
                     {label}
-                    {id === "quality" && data.quarantine.length > 0 && (
-                      <span>{data.quarantine.length}</span>
-                    )}
+                    <span>
+                      {id === "orders"
+                        ? data.rows.length
+                        : id === "runs"
+                          ? data.runs.length
+                          : id === "quality"
+                            ? data.quarantine.length
+                            : Object.keys(fixtures.batches).length}
+                    </span>
                   </button>
                 ))}
               </nav>
               {tab === "orders" && (
                 <section className="of-order-layout">
-                  <div className="of-panel">
+                  <div className="of-panel" id="of-order-list">
                     <div className="of-panel-head">
                       <div>
                         <h2>Conciliación por pedido</h2>
@@ -386,7 +426,7 @@ export default function OpsForge() {
                         </p>
                       </div>
                       <a className="of-export" href="/api/opsforge/export">
-                        <Download size={16} /> CSV
+                        <Download size={16} /> Exportar CSV
                       </a>
                     </div>
                     <div className="of-filters">
@@ -394,7 +434,7 @@ export default function OpsForge() {
                         <Search size={16} />
                         <input
                           aria-label="Buscar pedido"
-                          placeholder="Buscar PED-0003…"
+                          placeholder="Buscar por número de pedido…"
                           value={search}
                           onChange={(e) => setSearch(e.target.value)}
                         />
@@ -449,7 +489,27 @@ export default function OpsForge() {
                               <td>
                                 <button
                                   className="of-order-link"
-                                  onClick={() => setSelected(r.order_id)}
+                                  onClick={() => {
+                                    setSelected(r.order_id);
+                                    if (
+                                      window.matchMedia("(max-width: 800px)")
+                                        .matches
+                                    ) {
+                                      const detail =
+                                        document.getElementById(
+                                          "of-order-detail",
+                                        );
+                                      detail?.focus({ preventScroll: true });
+                                      detail?.scrollIntoView({
+                                        behavior: window.matchMedia(
+                                          "(prefers-reduced-motion: reduce)",
+                                        ).matches
+                                          ? "auto"
+                                          : "smooth",
+                                        block: "start",
+                                      });
+                                    }
+                                  }}
                                   aria-pressed={r.order_id === order?.order_id}
                                 >
                                   {r.order_id}
@@ -493,10 +553,15 @@ export default function OpsForge() {
                   </div>
                   <aside
                     className="of-panel of-detail"
+                    id="of-order-detail"
+                    tabIndex={-1}
                     aria-label="Detalle del pedido"
                   >
                     {order ? (
                       <>
+                        <a className="of-back-to-list" href="#of-order-list">
+                          <ArrowLeft size={14} /> Volver a la tabla
+                        </a>
                         <div className="of-panel-head">
                           <div>
                             <p className="of-eyebrow">TRAZABILIDAD</p>
@@ -717,6 +782,12 @@ export default function OpsForge() {
                         </a>
                       </details>
                     ))}
+                    {data.quarantine.length === 0 && (
+                      <div className="of-empty">
+                        <CheckCircle2 />
+                        <p>No hay filas en cuarentena.</p>
+                      </div>
+                    )}
                   </div>
                   <div className="of-panel">
                     <div className="of-panel-head">
@@ -756,7 +827,7 @@ export default function OpsForge() {
         </main>
         <footer className="of-footer">
           <a href="/">
-            <ArrowLeft size={15} /> Sebastián Cortés · Portfolio
+            <ArrowLeft size={15} /> Sebastián Cortés · Portafolio
           </a>
           <span>
             Proyecto personal · fuentes ficticias reproducibles · sin datos de

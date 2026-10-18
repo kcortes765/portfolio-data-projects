@@ -121,4 +121,3 @@ Filtrar solar/SING/2025 → explicar 7.961.754,9109883368 MWh desde 765 observac
 Desarrollo asistido por IA; la evidencia está en el sistema y sus pruebas. No se han medido ahorros de tokens, retorno comercial ni productividad personal. Código y dependencias se entregan para revisión/reproducción; la licencia de los datos es independiente de las licencias de software incluidas en las dependencias.
 
 La verificación de una publicación puede repetirse con `python scripts/verify-release.py --report release-checks.json`. Compara cada grupo de cinco selecciones con el CSV original, revisa páginas y valida descargas/manifest. El informe no contiene credenciales.
-

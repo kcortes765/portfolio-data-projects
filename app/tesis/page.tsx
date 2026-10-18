@@ -8,224 +8,332 @@ import {
   FlaskConical,
 } from "lucide-react";
 import ThesisSchematic from "@/components/thesis-schematic";
+
 export const metadata: Metadata = {
   title: "SPH-IncipientMotion · Tesis de Sebastián Cortés",
   description:
     "Investigación numérica del movimiento incipiente de bloques costeros: DualSPHysics, Chrono, Python, automatización de experimentos y modelos sustitutos.",
 };
+
 export default function Thesis() {
   return (
-    <div className="case-page thesis-page">
+    <div className="case-page thesis-page project-story story-research">
       <a className="skip" href="#thesis-main">
         Saltar a la investigación
       </a>
-      <header className="portfolio-nav">
-        <a className="identity" href="/">
-          <span className="monogram">
-            SC<span>·</span>
+      <header className="story-nav">
+        <a className="story-identity" href="/">
+          <span className="story-monogram">sc.</span>
+          <span>
+            Sebastián Cortés<small>PORTAFOLIO / PROYECTOS</small>
           </span>
-          <span>Sebastián Cortés</span>
         </a>
-        <a className="pf-text-action" href="/#proyecto">
-          Ver los proyectos <ArrowUpRight size={16} />
+        <a className="story-nav-link" href="/#proyecto">
+          Ver proyectos <ArrowUpRight size={16} />
         </a>
       </header>
-      <main className="case-content" id="thesis-main">
-        <a className="text-link" href="/#proyecto">
-          <ArrowLeft size={16} /> Volver al portafolio
+      <main className="story-content" id="thesis-main">
+        <a className="story-back" href="/#proyecto">
+          <ArrowLeft size={14} /> Todos los proyectos
         </a>
-        <div className="thesis-heading-meta">
-          <p className="eyebrow">03 / TESIS · INGENIERÍA CIVIL UCN</p>
-          <span className="thesis-progress">Investigación en desarrollo</span>
+        <div className="story-meta">
+          <p>03 / TESIS · INGENIERÍA CIVIL UCN</p>
+          <span className="story-status-open">
+            <i /> Investigación en desarrollo
+          </span>
         </div>
-        <h1>
-          SPH-IncipientMotion.
-          <br />
-          Del flujo al movimiento.
-        </h1>
-        <p className="case-lead">
-          ¿Bajo qué condiciones un flujo tipo tsunami comienza a desplazar un
-          bloque costero? Una investigación que conecta simulación numérica,
-          dinámica rígida, ingeniería de datos y aprendizaje automático.
-        </p>
-        <div className="case-stack">
-          DualSPHysics 5.4 · Project Chrono · Python · NumPy / pandas · SQLite ·
-          scikit-learn
+        <div className="story-hero story-research-hero">
+          <div className="story-hero-copy">
+            <p className="story-kicker">SPH-INCIPIENTMOTION</p>
+            <h1>
+              Del flujo
+              <br />
+              <em>al movimiento.</em>
+            </h1>
+            <p className="story-lead">
+              ¿Bajo qué condiciones un flujo tipo tsunami comienza a desplazar
+              un bloque costero?
+            </p>
+            <p className="story-intro">
+              Simulación numérica, automatización de experimentos e ingeniería
+              de datos para estudiar un umbral físico.
+            </p>
+            <a className="story-inline-link" href="#thesis-system">
+              Ver el sistema de experimentación <ArrowUpRight size={16} />
+            </a>
+          </div>
+          <div className="story-research-visual">
+            <div className="story-visual-label">
+              <span>MODELO DEL PROBLEMA</span>
+              <span>FLUJO → BLOQUE → OBSERVACIÓN</span>
+            </div>
+            <ThesisSchematic />
+            <div className="story-observables">
+              <div>
+                <span>ENTRADAS</span>
+                <p>Flujo · Geometría · Masa · Fricción</p>
+              </div>
+              <div>
+                <span>OBSERVACIONES</span>
+                <p>Desplazamiento · Rotación · Señales hidráulicas</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <ThesisSchematic />
-        <section>
-          <h2>La pregunta de ingeniería</h2>
-          <p>
-            El movimiento depende del flujo, la geometría del bloque, su masa,
-            la fricción y la interacción con el fondo. El proyecto estudia ese
-            umbral mediante casos paramétricos de flujos transitorios tipo
-            tsunami, generados numéricamente.
-          </p>
-          <p>
-            DualSPHysics representa el fluido con partículas mediante SPH.
-            Chrono resuelve la dinámica del cuerpo rígido y el contacto. Las
-            salidas permiten estudiar desplazamiento, rotación y señales
-            hidráulicas, manteniendo explícitas las unidades y las condiciones
-            de cada caso.
-          </p>
-          <p>
-            Es una investigación de simulación numérica. No incluye un
-            laboratorio físico ni una validación experimental propia.
-          </p>
+        <dl className="story-facts">
+          <div>
+            <dt>CONTEXTO</dt>
+            <dd>Tesis académica en desarrollo</dd>
+          </div>
+          <div>
+            <dt>SIMULACIÓN</dt>
+            <dd>DualSPHysics 5.4 + Chrono</dd>
+          </div>
+          <div>
+            <dt>DATOS</dt>
+            <dd>Python · pandas · SQLite</dd>
+          </div>
+          <div>
+            <dt>EVALUACIÓN</dt>
+            <dd>Modelos sustitutos · scikit-learn</dd>
+          </div>
+        </dl>
+        <section
+          className="story-section story-split"
+          aria-labelledby="thesis-question"
+        >
+          <div>
+            <p className="story-section-number">01 / LA PREGUNTA</p>
+            <h2 id="thesis-question">
+              Observar el inicio.
+              <br />
+              Explicar las condiciones.
+            </h2>
+          </div>
+          <div className="story-section-copy">
+            <p>
+              El movimiento depende del flujo, la geometría, la masa, la
+              fricción y la interacción con el fondo. El proyecto explora ese
+              umbral mediante casos paramétricos de flujos transitorios
+              generados numéricamente.
+            </p>
+            <p>
+              DualSPHysics representa el fluido con partículas mediante SPH.
+              Chrono resuelve la dinámica del cuerpo rígido y el contacto. Las
+              salidas se estudian conservando unidades y condiciones de cada
+              caso.
+            </p>
+            <div className="story-boundary">
+              <FlaskConical size={19} />
+              <p>
+                Investigación de simulación numérica. No incluye laboratorio
+                físico ni validación experimental propia.
+              </p>
+            </div>
+          </div>
         </section>
-        <section>
-          <h2>La infraestructura detrás del experimento</h2>
-          <p>
-            La tesis también es un sistema de software: convierte una matriz de
-            parámetros en casos ejecutables, organiza sus salidas y prepara
-            datos para comparaciones reproducibles.
-          </p>
-          <ol className="thesis-pipeline">
+        <section
+          className="story-section"
+          id="thesis-system"
+          aria-labelledby="thesis-pipeline"
+        >
+          <div className="story-section-heading">
+            <div>
+              <p className="story-section-number">02 / EL SISTEMA</p>
+              <h2 id="thesis-pipeline">De los parámetros a los datos.</h2>
+            </div>
+            <p>
+              La infraestructura organiza experimentos, ejecuciones y resultados
+              que se pueden rastrear.
+            </p>
+          </div>
+          <ol className="story-experiment-flow">
             {[
-              [
-                "01",
-                "Construir los casos",
-                "Python, geometrías STL y plantillas XML parametrizadas; diseño de experimentos con muestreo Latin Hypercube.",
-              ],
-              [
-                "02",
-                "Ejecutar y conservar",
-                "Orquestación de GenCase y DualSPHysics por CLI, simulación en GPU, registros de ejecución y preservación de evidencia.",
-              ],
-              [
-                "03",
-                "Transformar las salidas",
-                "ETL de CSV de Chrono y sensores: unidades, valores ausentes, métricas cinemáticas y almacenamiento estructurado en SQLite.",
-              ],
-              [
-                "04",
-                "Comparar y evaluar",
-                "Modelos Gaussian Process, selección de candidatos mediante active learning y análisis de sensibilidad, incertidumbre y generalización.",
-              ],
-            ].map(([n, title, text]) => (
+              {
+                n: "01",
+                title: "Construir",
+                code: "PARÁMETROS → CASOS",
+                text: "Python, geometrías STL y plantillas XML parametrizadas. Diseño de experimentos con muestreo Latin Hypercube.",
+              },
+              {
+                n: "02",
+                title: "Ejecutar",
+                code: "CLI → SIMULACIÓN GPU",
+                text: "Orquestación de GenCase y DualSPHysics, registros de ejecución y preservación de las salidas y sus fallos.",
+              },
+              {
+                n: "03",
+                title: "Transformar",
+                code: "CSV → DATOS ESTRUCTURADOS",
+                text: "ETL de Chrono y sensores: unidades, valores ausentes, métricas cinemáticas y almacenamiento SQLite.",
+              },
+              {
+                n: "04",
+                title: "Evaluar",
+                code: "DATASET → MODELO SUSTITUTO",
+                text: "Código de Gaussian Processes y active learning. Evaluación de sensibilidad, incertidumbre y generalización.",
+              },
+            ].map(({ n, title, code, text }) => (
               <li key={n}>
-                <span>{n}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
+                <span className="story-flow-number">{n}</span>
+                <h3>{title}</h3>
+                <span className="story-flow-code">{code}</span>
+                <p>{text}</p>
               </li>
             ))}
           </ol>
+          <p className="story-flow-note">
+            NumPy / pandas para el procesamiento · SQLite para persistencia ·
+            scikit-learn para los modelos sustitutos
+          </p>
         </section>
-        <section>
-          <h2>Qué aporta como proyecto técnico</h2>
-          <div className="thesis-capabilities">
+        <section className="story-section" aria-labelledby="thesis-skills">
+          <div className="story-section-heading">
+            <div>
+              <p className="story-section-number">03 / APORTE TÉCNICO</p>
+              <h2 id="thesis-skills">El trabajo detrás de una ejecución.</h2>
+            </div>
+            <p>
+              Un problema científico que exige software, datos y criterio
+              numérico.
+            </p>
+          </div>
+          <div className="story-feature-grid">
             {[
-              [
-                Code2,
-                "Automatización científica",
-                "Convertir especificaciones de experimentos en ejecuciones trazables y conservar fallos para investigarlos.",
-              ],
-              [
-                Database,
-                "Ingeniería de datos",
-                "Procesar formatos del solver, construir datasets y separar datos operativos de cohortes científicas comparables.",
-              ],
-              [
-                Waves,
-                "Computación numérica",
-                "Relacionar discretización, contacto, condiciones de frontera y pasos de integración con las observaciones.",
-              ],
-              [
-                FlaskConical,
-                "Modelos sustitutos en evaluación",
-                "Evaluar un modelo sustituto, sus supuestos y su capacidad de generalizar fuera de los casos conocidos.",
-              ],
-            ].map(([Icon, title, text]) => {
-              const I = Icon as typeof Code2;
-              return (
-                <article key={String(title)}>
-                  <I size={22} />
-                  <h3>{String(title)}</h3>
-                  <p>{String(text)}</p>
-                </article>
-              );
-            })}
+              {
+                Icon: Code2,
+                title: "Automatización científica",
+                tag: "EJECUCIONES TRAZABLES",
+                text: "Convertir especificaciones en casos ejecutables, conservar registros e investigar los fallos.",
+              },
+              {
+                Icon: Database,
+                title: "Ingeniería de datos",
+                tag: "SALIDAS COMPARABLES",
+                text: "Procesar formatos del solver y separar datos operativos de cohortes científicas comparables.",
+              },
+              {
+                Icon: Waves,
+                title: "Computación numérica",
+                tag: "SUPUESTOS EXPLÍCITOS",
+                text: "Relacionar discretización, contacto, fronteras y pasos de integración con las observaciones.",
+              },
+              {
+                Icon: FlaskConical,
+                title: "Modelos sustitutos",
+                tag: "EVALUACIÓN EN CURSO",
+                text: "Examinar sus supuestos y su capacidad de generalizar fuera de los casos conocidos.",
+              },
+            ].map(({ Icon, title, tag, text }) => (
+              <article key={title}>
+                <Icon size={23} />
+                <p className="story-feature-tag">{tag}</p>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
           </div>
         </section>
-        <section>
-          <h2>Estado y alcance de la investigación</h2>
-          <div className="thesis-status-grid">
+        <section className="story-section" aria-labelledby="thesis-state">
+          <div className="story-section-heading">
             <div>
-              <h3>Implementado en el repositorio</h3>
+              <p className="story-section-number">04 / ESTADO Y EVIDENCIA</p>
+              <h2 id="thesis-state">
+                Qué está construido.
+                <br />
+                Qué sigue en evaluación.
+              </h2>
+            </div>
+            <p>
+              Una ejecución completa aporta datos. La conclusión física requiere
+              controles adicionales.
+            </p>
+          </div>
+          <div className="story-evidence-grid">
+            <article>
+              <span className="story-evidence-label">
+                IMPLEMENTADO EN EL REPOSITORIO
+              </span>
+              <h3>Infraestructura de experimentación</h3>
               <ul>
                 <li>Generación paramétrica de geometrías y casos.</li>
-                <li>
-                  Orquestación de simulaciones y procesamiento de resultados.
-                </li>
+                <li>Orquestación y procesamiento de simulaciones.</li>
                 <li>ETL, métricas y almacenamiento SQLite.</li>
                 <li>Código de Gaussian Processes y active learning.</li>
-                <li>
-                  Instrumentación, pruebas y trazabilidad de experimentos.
-                </li>
+                <li>Instrumentación, pruebas y trazabilidad.</li>
               </ul>
-            </div>
-            <div>
-              <h3>Validación en curso</h3>
+            </article>
+            <article>
+              <span className="story-evidence-label">VALIDACIÓN EN CURSO</span>
+              <h3>Alcance de las conclusiones</h3>
               <ul>
                 <li>Sensibilidad temporal y a la discretización.</li>
-                <li>
-                  Observación del movimiento y comportamiento del contacto.
-                </li>
+                <li>Movimiento del bloque y comportamiento del contacto.</li>
                 <li>Interpretación hidráulica y efectos de las fronteras.</li>
                 <li>Nuevas campañas y admisibilidad de sus datos.</li>
-                <li>Generalización y límites de los modelos sustitutos.</li>
+                <li>Generalización de los modelos sustitutos.</li>
               </ul>
-            </div>
+            </article>
           </div>
-          <p>
-            El repositorio contiene análisis históricos y nuevas campañas de
-            diagnóstico. El programa de validación continúa abierto: disponer de
-            código o terminar una ejecución no basta para certificar una
-            conclusión física. Los resultados negativos se conservan y orientan
-            el siguiente experimento.
-          </p>
-          <p className="thesis-review-date">
-            Resumen del estado documental revisado el 14 de septiembre de 2026.
-            Esta página es una presentación del proyecto; no monitoriza
-            ejecuciones en vivo.
-          </p>
+          <div className="story-evidence-note">
+            <p>
+              El repositorio contiene análisis históricos y nuevas campañas de
+              diagnóstico. El programa de validación continúa abierto; los
+              resultados negativos también se conservan y orientan el siguiente
+              experimento.
+            </p>
+            <p className="story-review">
+              Estado documental revisado el 14 de septiembre de 2026. Esta
+              página presenta el proyecto; no monitoriza ejecuciones en vivo.
+            </p>
+          </div>
         </section>
-        <section>
-          <h2>Desarrollo asistido por IA, evidencia revisable</h2>
-          <p>
-            La IA apoya el desarrollo y la revisión del pipeline. La
-            verificación se apoya en pruebas, trazabilidad de archivos,
-            criterios explícitos y contraste de resultados. El objetivo es poder
-            explicar tanto una conclusión como las razones para no sostenerla
-            todavía.
-          </p>
-          <p>
-            Este trabajo se presenta como tesis e investigación académica en
-            desarrollo. Complementa los proyectos de datos y automatización del
-            portafolio con un problema físico que exige experimentación y
-            criterio numérico.
-          </p>
+        <section
+          className="story-section story-split story-scope"
+          aria-labelledby="thesis-review"
+        >
+          <div>
+            <p className="story-section-number">CRITERIO DE TRABAJO</p>
+            <h2 id="thesis-review">
+              Evidencia que se
+              <br />
+              pueda revisar.
+            </h2>
+          </div>
+          <div className="story-section-copy">
+            <p>
+              La IA apoya el desarrollo y la revisión del pipeline. La
+              verificación se apoya en pruebas, trazabilidad de archivos,
+              criterios explícitos y contraste de resultados.
+            </p>
+            <p>
+              El objetivo es explicar una conclusión y reconocer cuándo los
+              datos todavía no permiten sostenerla. Esta tesis complementa los
+              proyectos de datos y automatización con un problema físico en
+              investigación.
+            </p>
+          </div>
         </section>
-        <nav className="thesis-next" aria-label="Otros proyectos">
+        <nav className="story-next" aria-label="Otros proyectos">
           <a href="/opsforge/caso">
-            <span>OPERACIONES</span>
+            <span>CONCILIACIÓN DE DATOS</span>
             <strong>
-              OpsForge <ArrowUpRight size={18} />
+              OpsForge <ArrowUpRight size={21} />
             </strong>
           </a>
-          <a href="/gridops/caso">
-            <span>ENERGÍA</span>
+          <a href="/ceic">
+            <span>PRODUCTO WEB</span>
             <strong>
-              GridOps <ArrowUpRight size={18} />
+              Portal CEIC UCN <ArrowUpRight size={21} />
             </strong>
           </a>
         </nav>
       </main>
-      <footer className="portfolio-footer">
+      <footer className="story-footer">
         <span>Sebastián Cortés · Ingeniería Civil UCN, último año</span>
-        <a href="/">Volver al portafolio →</a>
+        <a href="/">
+          Volver al portafolio <ArrowUpRight size={14} />
+        </a>
       </footer>
     </div>
   );
