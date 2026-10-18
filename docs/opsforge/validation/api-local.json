@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-09-13T02:28:55.222541+00:00",
+  "base": "http://localhost:4175",
+  "passed": 34,
+  "checks": [
+    "Empty session",
+    "Export requires workspace",
+    "Origin rejected",
+    "Unknown scenario",
+    "Invalid object",
+    "Unsupported media",
+    "Oversized body",
+    "Start with base",
+    "Independent initial oracle",
+    "Accepted, duplicates and quarantine",
+    "Cookie isolation flags",
+    "Orphan retained",
+    "No workspace identifiers in records",
+    "Second visitor stays empty",
+    "Idempotent replay",
+    "Transactional rollback",
+    "Recovery and late corrections",
+    "Version history preserved",
+    "Conflict quarantined without overwrite",
+    "Schema gate preserves publication",
+    "Persistence after fresh request",
+    "CSV export",
+    "Download disposition",
+    "Visitor data separated",
+    "Concurrent publish is atomic",
+    "Manifest available",
+    "Source SHA256 base",
+    "Source SHA256 late",
+    "Source SHA256 conflict",
+    "Source SHA256 schema",
+    "Page /",
+    "Page /opsforge",
+    "Page /opsforge/caso",
+    "Page /gridops"
+  ],
+  "concurrent_statuses": [
+    200,
+    200
+  ],
+  "initial": {
+    "orders": 24,
+    "matched": 14,
+    "events": 68
+  },
+  "final": {
+    "orders": 25,
+    "matched": 25,
+    "events": 81
+  },
+  "limitations": "Synthetic bounded workloads; no production SLA or load-test claim."
+}

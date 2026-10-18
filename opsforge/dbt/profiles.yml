@@ -1,0 +1,13 @@
+opsforge:
+  target: local
+  outputs:
+    local:
+      type: postgres
+      host: "{{ env_var('OPSFORGE_PGHOST', '127.0.0.1') }}"
+      port: "{{ env_var('OPSFORGE_PGPORT', '55432') | int }}"
+      user: "{{ env_var('OPSFORGE_PGUSER', 'opsforge') }}"
+      password: "{{ env_var('OPSFORGE_PGPASSWORD', '') }}"
+      dbname: "{{ env_var('OPSFORGE_PGDATABASE', 'postgres') }}"
+      schema: opsforge_analytics
+      threads: 2
+      connect_timeout: 10

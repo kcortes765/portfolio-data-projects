@@ -1,0 +1,34 @@
+{
+  "seed": 20260912,
+  "synthetic": true,
+  "batches": {
+    "base": {
+      "id": "base",
+      "label": "Carga inicial",
+      "file": "base-37cc7b41f3db.csv",
+      "sha256": "37cc7b41f3db7b3a1d44058713e6244d194fa7f3c4d874368586fecefd95b568",
+      "rows": 74
+    },
+    "late": {
+      "id": "late",
+      "label": "Llegadas y correcciones",
+      "file": "late-cdd9d700c03d.csv",
+      "sha256": "cdd9d700c03d09a41af1843e9c027c3a8878cce473590d1cee8329348f39d66e",
+      "rows": 13
+    },
+    "conflict": {
+      "id": "conflict",
+      "label": "Conflicto de versión",
+      "file": "conflict-4d5b8cae9860.csv",
+      "sha256": "4d5b8cae98602f7289a6a3cecb5ced628842034e84ba2cfab8a9e40ed1b0cb2c",
+      "rows": 1
+    },
+    "schema": {
+      "id": "schema",
+      "label": "Esquema incompatible",
+      "file": "schema-32d735dd8e2e.csv",
+      "sha256": "32d735dd8e2e8ff3a747874d537f322cec7ab0032efb57f0b597a595f38d67fc",
+      "rows": 1
+    }
+  }
+}

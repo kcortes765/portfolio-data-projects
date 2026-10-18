@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-09-13T02:25:53.295254Z",
+  "dbt_version": "1.12.4",
+  "elapsed_time": 1.2929794788360596,
+  "results": [
+    {
+      "unique_id": "model.opsforge.stg_documents",
+      "status": "success",
+      "execution_time": 0.22664427757263184,
+      "failures": null
+    },
+    {
+      "unique_id": "test.opsforge.accepted_values_stg_documents_currency__CLP__USD.f29cefae7a",
+      "status": "pass",
+      "execution_time": 0.10991930961608887,
+      "failures": 0
+    },
+    {
+      "unique_id": "test.opsforge.accepted_values_stg_documents_kind__order__invoice__delivery.1968ec630d",
+      "status": "pass",
+      "execution_time": 0.14653944969177246,
+      "failures": 0
+    },
+    {
+      "unique_id": "test.opsforge.document_count_reconciliation",
+      "status": "pass",
+      "execution_time": 0.07456302642822266,
+      "failures": 0
+    },
+    {
+      "unique_id": "test.opsforge.not_null_stg_documents_order_id.b115df8fda",
+      "status": "pass",
+      "execution_time": 0.07362127304077148,
+      "failures": 0
+    },
+    {
+      "unique_id": "test.opsforge.not_null_stg_documents_scope.baeb119a70",
+      "status": "pass",
+      "execution_time": 0.0654597282409668,
+      "failures": 0
+    },
+    {
+      "unique_id": "test.opsforge.unique_document_revision",
+      "status": "pass",
+      "execution_time": 0.058972835540771484,
+      "failures": 0
+    },
+    {
+      "unique_id": "model.opsforge.stg_current",
+      "status": "success",
+      "execution_time": 0.1060492992401123,
+      "failures": null
+    },
+    {
+      "unique_id": "model.opsforge.mart_reconciliation",
+      "status": "success",
+      "execution_time": 0.11006927490234375,
+      "failures": null
+    },
+    {
+      "unique_id": "test.opsforge.matched_is_consistent",
+      "status": "pass",
+      "execution_time": 0.10909438133239746,
+      "failures": 0
+    },
+    {
+      "unique_id": "test.opsforge.accepted_values_mart_reconciliation_status__matched__missing_invoice__missing_delivery__currency__unit__amount__quantity.6be88b4eca",
+      "status": "pass",
+      "execution_time": 0.11108541488647461,
+      "failures": 0
+    },
+    {
+      "unique_id": "test.opsforge.unique_order",
+      "status": "pass",
+      "execution_time": 0.06298184394836426,
+      "failures": 0
+    }
+  ]
+}

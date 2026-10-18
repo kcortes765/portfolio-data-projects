@@ -1,0 +1,9 @@
+node_modules
+.venv
+.git
+.sites-runtime
+.wrangler
+dist
+.env*
+public/downloads
+__pycache__

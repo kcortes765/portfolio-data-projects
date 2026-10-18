@@ -1,0 +1,2 @@
+kind,entity_id,order_id,version,amount_minor,currency,quantity,unit,event_date
+invoice,I-0001,PED-0001,1,999999,CLP,3,ea,2026-08-01

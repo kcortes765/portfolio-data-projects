@@ -1,0 +1,36 @@
+{
+  "executed_at": "2026-09-12T15:23:00.370235+00:00",
+  "base": "http://localhost:4175",
+  "checks": [
+    {
+      "name": "API JSON vs independent raw Decimal aggregation",
+      "status": "pass",
+      "raw_rows": 765,
+      "total_mwh": "7961754.9109883368"
+    },
+    {
+      "name": "CSV download matches filters, count and energy",
+      "status": "pass"
+    },
+    {
+      "name": "Invalid dates and categories return HTTP 400",
+      "status": "pass"
+    },
+    {
+      "name": "No-data selection is empty, not invented observations",
+      "status": "pass"
+    },
+    {
+      "name": "Live official metadata check",
+      "status": "pass",
+      "result": {
+        "checked_at": "2026-09-12T15:23:00.364Z",
+        "resource_modified": "2026-04-01T13:56:04.685737",
+        "snapshot_resource_modified": "2026-04-01T13:56:04.685737",
+        "changed": false,
+        "scope": "metadata-only",
+        "data_refreshed": false
+      }
+    }
+  ]
+}

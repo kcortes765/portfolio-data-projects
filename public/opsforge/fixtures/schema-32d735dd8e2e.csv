@@ -1,0 +1,2 @@
+kind,entity_id,order_id,version,amount_minor,quantity,unit,event_date
+order,O-0001,PED-0001,1,25800,3,ea,2026-08-01

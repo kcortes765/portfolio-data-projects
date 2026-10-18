@@ -1,0 +1,33 @@
+version: 2
+sources:
+  - name: raw
+    schema: opsforge
+    tables:
+      - name: of_events
+        description: Validated immutable document revisions, partitioned by workspace.
+models:
+  - name: stg_documents
+    description: Incremental storage of every revision. Full bounded source scan avoids missing late arrivals.
+    columns:
+      - name: scope
+        data_tests: [not_null]
+      - name: order_id
+        data_tests: [not_null]
+      - name: kind
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['order', 'invoice', 'delivery']
+      - name: currency
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['CLP', 'USD']
+  - name: mart_reconciliation
+    description: One row per workspace and order; document sets aggregated before joining.
+    columns:
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['matched', 'missing_invoice', 'missing_delivery', 'currency', 'unit', 'amount', 'quantity']

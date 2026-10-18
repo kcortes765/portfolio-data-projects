@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-13T02:38:40.286116+00:00",
+  "passed": true,
+  "checks": [
+    "40 runs do not duplicate facts",
+    "Run 41 returns 429",
+    "Expired token has no readable workspace",
+    "Expired export denied",
+    "Expired space requires fresh base",
+    "Fresh cookie and revision after expiration"
+  ],
+  "environment": "Local D1 only; test-created synthetic scope"
+}

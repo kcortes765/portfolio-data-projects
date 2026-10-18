@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-09-13T02:35:29.886149+00:00",
+  "passed": true,
+  "hashes": {
+    "lib\\opsforge\\fixtures.json": "848562e5536887f1d7221b478596dab3e2cd67087012c8c71b9e1d68b755386c",
+    "public\\opsforge\\fixtures\\manifest.json": "6633530c9a42332d547c164de913ea14d072d60ea421584b936f9f0416113b75",
+    "opsforge\\expected.json": "7b5b8efb03f691218ce8bf207195a3130c17aedc4002d039cf02a8c8f92bd21f"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-13T02:31:53.798578+00:00",
+  "engines": [
+    "SQLite",
+    "PostgreSQL 18.6",
+    "dbt mart"
+  ],
+  "compared_orders": 25,
+  "compared_fields": 15,
+  "passed": true
+}

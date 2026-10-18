@@ -1,0 +1,110 @@
+{
+  "author": "Comisión Nacional de Energía",
+  "author_email": "infoestadistica@cne.cl",
+  "creator_user_id": "35905459-da8a-4ccb-83a4-ff5385e4b536",
+  "id": "0e54541d-e5b4-47a5-9cc8-0bd5062d1c88",
+  "isopen": true,
+  "license_id": "cc-by",
+  "license_title": "Creative Commons Attribution",
+  "license_url": "http://www.opendefinition.org/licenses/cc-by",
+  "maintainer": null,
+  "maintainer_email": null,
+  "metadata_created": "2026-02-18T20:29:40.453947",
+  "metadata_modified": "2026-04-01T13:56:57.724038",
+  "name": "generacion-bruta",
+  "notes": "Contiene estadísticas asociadas a la generación eléctrica.",
+  "num_resources": 1,
+  "num_tags": 4,
+  "organization": {
+    "id": "a84eba6e-c2e2-423a-9901-2de9350dbf2f",
+    "name": "comision-nacional-de-energia",
+    "title": "Comisión Nacional de Energía",
+    "type": "organization",
+    "description": "La Comisión Nacional de Energía (CNE) es un organismo público y descentralizado, con patrimonio propio y plena capacidad para adquirir y ejercer derechos y obligaciones, que se relaciona con el Presidente de la República por intermedio del Ministerio de Energía. Su Ley Orgánica Institucional corresponde al Decreto de Ley Nº 2.224, de 1978, modificado por la Ley Núm. 20.402, de 2010 que crea el Ministerio de Energía.",
+    "image_url": "2026-02-18-204006.067857logo-cne.png",
+    "created": "2024-10-07T21:25:05.237370",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "a84eba6e-c2e2-423a-9901-2de9350dbf2f",
+  "period": "no informado",
+  "private": false,
+  "state": "active",
+  "title": "Generación Bruta",
+  "type": "dataset",
+  "url": "Coordinador Eléctrico Nacional",
+  "version": "no informado",
+  "extras": [
+    {
+      "key": "Fuente",
+      "value": "Coordinador Eléctrico Nacional"
+    }
+  ],
+  "resources": [
+    {
+      "cache_last_updated": null,
+      "cache_url": null,
+      "ckan_url": "https://datos.gob.cl",
+      "created": "2026-02-18T20:29:49.212262",
+      "datastore_active": true,
+      "datastore_contains_all_records_of_source_file": true,
+      "description": "Generación bruta mensual del Sistema Eléctrico Nacional (SEN) desde 2014. Asimismo, estos datos pueden ser consultados en nuestro sitio Energía Abierta, en el siguiente [enlace](http://energiaabierta.cl/visualizaciones/generacion-de-energia-electrica/).",
+      "format": "csv",
+      "hash": "94e45a917cfa9b85df02378574e13dc5",
+      "id": "389a1943-9c3d-4957-982a-58e3fb0c1bdb",
+      "ignore_hash": true,
+      "last_modified": "2026-04-01T13:56:04.685737",
+      "metadata_modified": "2026-04-01T13:56:57.735276",
+      "mimetype": "text/csv",
+      "mimetype_inner": null,
+      "name": "Generación Bruta Mensual SEN",
+      "original_url": "https://datos.gob.cl/dataset/0e54541d-e5b4-47a5-9cc8-0bd5062d1c88/resource/389a1943-9c3d-4957-982a-58e3fb0c1bdb/download/generacion-bruta-mensual-sen.csv",
+      "package_id": "0e54541d-e5b4-47a5-9cc8-0bd5062d1c88",
+      "position": 0,
+      "resource_id": "389a1943-9c3d-4957-982a-58e3fb0c1bdb",
+      "resource_type": null,
+      "set_url_type": false,
+      "size": 6731181,
+      "state": "active",
+      "task_created": "2026-04-01 13:56:04.913247",
+      "url": "https://datos.gob.cl/dataset/0e54541d-e5b4-47a5-9cc8-0bd5062d1c88/resource/389a1943-9c3d-4957-982a-58e3fb0c1bdb/download/generacion-bruta-mensual-sen.csv",
+      "url_type": "upload"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Electricidad",
+      "id": "120fa359-a82c-41ae-9c97-e6c643f0547a",
+      "name": "Electricidad",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Estadísticas",
+      "id": "4bd78f10-a48d-4065-9667-df5c8c421c9d",
+      "name": "Estadísticas",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Generación",
+      "id": "f5cab1d1-0cf6-4de2-9c66-931559205945",
+      "name": "Generación",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mercado Eléctrico",
+      "id": "3f23b732-0b80-402e-af4a-b4d190b312fc",
+      "name": "Mercado Eléctrico",
+      "state": "active",
+      "vocabulary_id": null
+    }
+  ],
+  "groups": [],
+  "relationships_as_subject": [],
+  "relationships_as_object": [],
+  "retrieved_at": "2026-09-12T14:51:30.687039+00:00",
+  "sha256": "076acaf239d93f23859bf5013d828355389488e19b49113d3c4b7d09dfd69da4"
+}

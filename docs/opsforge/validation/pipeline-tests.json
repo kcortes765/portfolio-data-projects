@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-13T02:35:29.925199+00:00",
+  "engines": [
+    "SQLite",
+    "PostgreSQL 18.6"
+  ],
+  "passed_each": 11,
+  "failures": 0,
+  "command": "python -m opsforge.test_pipeline",
+  "notes": "Same tests executed with OPSFORGE_TEST_DSN set to isolated PostgreSQL and unset for SQLite."
+}

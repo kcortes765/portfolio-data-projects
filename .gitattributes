@@ -1,0 +1,5 @@
+* text=auto eol=lf
+data/raw/*.csv -text
+public/data/**/*.csv -text
+*.parquet -text
+*.zip -text

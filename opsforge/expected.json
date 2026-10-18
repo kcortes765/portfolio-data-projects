@@ -1,0 +1,20 @@
+{
+  "initial_orders": 24,
+  "final_orders": 25,
+  "initial_open_orders": [
+    "PED-0003",
+    "PED-0004",
+    "PED-0005",
+    "PED-0007",
+    "PED-0009",
+    "PED-0011",
+    "PED-0013",
+    "PED-0015",
+    "PED-0017",
+    "PED-0019"
+  ],
+  "final_open_orders": [],
+  "initial_quarantined": 2,
+  "initial_duplicates": 4,
+  "initial_orphans": 1
+}

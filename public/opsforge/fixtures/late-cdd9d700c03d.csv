@@ -1,0 +1,14 @@
+kind,entity_id,order_id,version,amount_minor,currency,quantity,unit,event_date
+invoice,I-0003,PED-0003,1,45500,CLP,5,ea,2026-08-03
+delivery,D-0004,PED-0004,1,0,CLP,6,ea,2026-08-04
+invoice,I-0005,PED-0005,2,59500,CLP,7,kg,2026-08-05
+invoice,I-0007,PED-0007,2,20800,CLP,2,ea,2026-08-07
+invoice,I-0009,PED-0009,1,41600,CLP,4,ea,2026-08-09
+delivery,D-0009,PED-0009,1,0,CLP,4,ea,2026-08-09
+delivery,D-0011,PED-0011,2,0,CLP,6,ea,2026-08-11
+delivery,D-0013,PED-0013,2,0,CLP,8,ea,2026-08-13
+invoice,I-0015,PED-0015,1,30000,CLP,3,kg,2026-08-15
+delivery,D-0017,PED-0017,1,0,CLP,5,ea,2026-08-17
+delivery,D-0019,PED-0019,2,0,CLP,7,ea,2026-08-19
+order,O-0999,PED-0999,1,45000,CLP,5,ea,2026-08-15
+delivery,D-0999,PED-0999,1,0,CLP,5,ea,2026-08-15
