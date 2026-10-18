@@ -18,11 +18,11 @@
     },
     {
       "path": ".github/workflows/review.yml",
-      "sha256": "547f3e57b77cce30331a19c14e2a6b038cefe7b24208e230f0f044ff4357679f"
+      "sha256": "c30021ee1f68997ff9c2e0f1be22052851bc55a09684c211370eafe5e965296d"
     },
     {
       "path": ".gitignore",
-      "sha256": "2bf1e6cae7bceaddfd8ba22cdddae8154ed666e1593330be8dfa0a7dc31a3bbb"
+      "sha256": "3e63705d1c7014cad4e196b38db4444b192513ac55737abb4f161e3554a4eda8"
     },
     {
       "path": ".npmrc",
@@ -402,7 +402,7 @@
     },
     {
       "path": "data/raw/source-metadata.json",
-      "sha256": "5577d4449fd318a4421f174a016a9634bc0a66ad4025ae86f0071998e87e819b"
+      "sha256": "f1bd2e678615792f8fa39d3c5ce53169a1262662fe204bdbadb3bc990f3fbc49"
     },
     {
       "path": "db/index.ts",
@@ -418,7 +418,7 @@
     },
     {
       "path": "docs/ARQUITECTURA.md",
-      "sha256": "db5bdece1b181a9b5019891dd66454d1bc5b899d2fc0cff0d8dd3fd172fc9253"
+      "sha256": "7aa7c5763469fe5c02216bcdf387364ccf213df4821ccbad28e3ea2932e36ea6"
     },
     {
       "path": "docs/INVESTIGACION.md",
@@ -430,43 +430,43 @@
     },
     {
       "path": "docs/opsforge/VALIDACION.md",
-      "sha256": "24b00e6d7079695bb96b05077f6c7eddbc94950a4697fac21f079b5c77767999"
+      "sha256": "7526aee49059a22dcedb8b2b2466394958d4fa79cc929720519d4ee1886c573f"
     },
     {
       "path": "docs/opsforge/validation/api-local.json",
-      "sha256": "7a825195ad7a900691fb89f672bdd81cb353bf5503b0767efa1b14b6bd57d3f8"
+      "sha256": "cd37c63c8796f598521f9fb10478690f2ca28dcc9ab5e3bce547f40e24a40c98"
     },
     {
       "path": "docs/opsforge/validation/api-public-v5.json",
-      "sha256": "1f4b5c0d3917edc0e181d8f16046a410a2987a46dbe2bc5a7f62159613fa1bef"
+      "sha256": "6807dd66709a4982662e6b37f934fe1186f3042b7e9e4c6ce7a4ef8c7628eda8"
     },
     {
       "path": "docs/opsforge/validation/dbt-incremental.json",
-      "sha256": "7a2493c1f76872ceccb01b72e86ee67fb0e73ea612b62b6753acb431baa07037"
+      "sha256": "9f5bf86e077d04347fb96db9ea049e1ae38560cee2bef883a4c9f9f6fb90d843"
     },
     {
       "path": "docs/opsforge/validation/local-limits.json",
-      "sha256": "b9d8cd0840163ac7cd5066b73dee126d4cfc229f0769071eb0a05021b5a4496f"
+      "sha256": "68f8d0d8d2360b2e68b2d9a24459f80cba33d1ef81ca2860b518a004573edd15"
     },
     {
       "path": "docs/opsforge/validation/model-parity.json",
-      "sha256": "5432198f5a052ab4237993506985231a4a923d297acd578c78ca601981ac3e01"
+      "sha256": "edd32e911c0a8e51a9f241e88a2f4dde8f3b83408fb279589e8568d343a68cd9"
     },
     {
       "path": "docs/opsforge/validation/pipeline-tests.json",
-      "sha256": "87abde9897a80cafa59f10208df6681f86ec3889e3ac12b4b223b0d48ef08556"
+      "sha256": "d1d2637c241d893e67caf9174dd2b301931b310c98439b99c3924adf04b95839"
     },
     {
       "path": "docs/opsforge/validation/reproducibility.json",
-      "sha256": "5c76a8798315167a31b9cecdbcb37cbb62cba889eae1ab2e93cc7759ea625b13"
+      "sha256": "2a10461b5982956f68b7eba1d65cf447d0caf89a798f1e9381ca872e47f04123"
     },
     {
       "path": "docs/PLAN.md",
-      "sha256": "a6c094fce2eb5b50fc598b1e67554f87eb5d981b29ca50c43b008ea127304bef"
+      "sha256": "13de7e8f2ebde588ea1d8bc02580a0d28c9be6c3055b4e898d4f4c84d82fe276"
     },
     {
       "path": "docs/PRD.md",
-      "sha256": "823da8777593f8317aa4559f9077044a5772883ffed499945eb9d1b3605cc8a8"
+      "sha256": "569b5332b96fae2eb3b38e93568e2a7c5621df3f2a75b5f1a7ebc1477800a627"
     },
     {
       "path": "docs/PROMPT_MAESTRO.md",
@@ -478,7 +478,7 @@
     },
     {
       "path": "docs/validation/http-checks.json",
-      "sha256": "8aa5eac88d168dd16a336e5edcf9159adb09178eb333ccee968348a7b0d3d62f"
+      "sha256": "1d0649a0cea1388f5578037549af300271592142637fcf5f8ea67df5b87be008"
     },
     {
       "path": "docs/validation/pipeline-run.json",
@@ -486,7 +486,7 @@
     },
     {
       "path": "docs/validation/VALIDACION.md",
-      "sha256": "751691a49525d72341f5b0395af4e3f145adf94d88a37ac7a5a4bee1153938ff"
+      "sha256": "85389bd66afd3f4cb260f5424cd0b9003258ba2351e79ad64946e6f8d2751fb9"
     },
     {
       "path": "drizzle/0000_outstanding_franklin_richards.sql",
@@ -526,7 +526,7 @@
     },
     {
       "path": "lib/opsforge/fixtures.json",
-      "sha256": "848562e5536887f1d7221b478596dab3e2cd67087012c8c71b9e1d68b755386c"
+      "sha256": "5e98a45945e8b89eed00530d90cce2eff623b01c8b9128db76650464ae851aa0"
     },
     {
       "path": "lib/opsforge/server.ts",
@@ -602,7 +602,7 @@
     },
     {
       "path": "opsforge/expected.json",
-      "sha256": "7b5b8efb03f691218ce8bf207195a3130c17aedc4002d039cf02a8c8f92bd21f"
+      "sha256": "40d5657e42115d30d7161b994e9bac0c4274357e7dd6c081ce4e4ef0021b4035"
     },
     {
       "path": "opsforge/generate.py",
@@ -614,7 +614,7 @@
     },
     {
       "path": "opsforge/README.md",
-      "sha256": "96e16ef5e2b6db9cab29f941486b1fd7a735d9d9b496e2d652e2af1f8fa758ff"
+      "sha256": "ee1e0e8b3a71f2dff3e1e06b40a05f755e828c48f3c2830942cb6cfb7297797f"
     },
     {
       "path": "opsforge/reconciliation.sql",
@@ -630,11 +630,11 @@
     },
     {
       "path": "opsforge/verify_api.py",
-      "sha256": "c8f3f08eac6f8c903da6150cfda895efd183cd1f9c76307bba6136ea10e07cf3"
+      "sha256": "6c2eb8f870e56c3d499517ea0b2ca0c9d54e803510fc58431489c3c6455b8159"
     },
     {
       "path": "opsforge/verify_local_limits.py",
-      "sha256": "fa8cffbf594def0576b15c53e9ae125d01ce853dbcb1a8af607c9de23f8f6f74"
+      "sha256": "a7258181c7a7ed6aef14ce0d48b6e3025ceb7ea695791738e797e7d1dd4683ee"
     },
     {
       "path": "opsforge/verify_models.py",
@@ -642,11 +642,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "20ad1aeac4d4396d03d84e3aee0369480424cba7af40e92c4b4d16d426ee53e0"
+      "sha256": "800a7e31d3e67fefff99fd1c80e8fe8678f518bb7a3684b409489c5639a5c1c8"
     },
     {
       "path": "package.json",
-      "sha256": "773e1dcd277c73edc9faeb0083c8306d04eb291940802f9a985d0cfd7758c08f"
+      "sha256": "fd5b547dc17279245bd11623fd7840e317fd370997729c5b0f257b5cfa9dedec"
     },
     {
       "path": "pipeline/build.py",
@@ -698,7 +698,7 @@
     },
     {
       "path": "public/favicon.svg",
-      "sha256": "ca92ee17e05603fd4793e5076a870eddfc90ac5c55909ca845cb1bf660ad022d"
+      "sha256": "fea9f413158aac6edfde8e5e8fcc78cbb0c04e6b3747955fc1aa65f0e37d2b78"
     },
     {
       "path": "public/images/gridops-preview.png",
@@ -726,7 +726,7 @@
     },
     {
       "path": "public/opsforge/fixtures/manifest.json",
-      "sha256": "6633530c9a42332d547c164de913ea14d072d60ea421584b936f9f0416113b75"
+      "sha256": "235db544d9a282d7d78f0e63e9c0f4b7e1944f802b7490b842641d9ec82639d2"
     },
     {
       "path": "public/opsforge/fixtures/schema-32d735dd8e2e.csv",
@@ -734,7 +734,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "c3784f2c00ac8d9b44f803a52a1a533fb75715bc51a4cda3fd91449848e14a15"
+      "sha256": "74e95e82cbfddde663ddad9fb2cdad006ef0c9e72f46b18d1d1c9e84a7e64285"
     },
     {
       "path": "scripts/build-verified.sh",
@@ -758,7 +758,7 @@
     },
     {
       "path": "scripts/package-source.py",
-      "sha256": "70e9955ca7890e7467833df8b09a530099635129adf80fd7f788dbc434953690"
+      "sha256": "59dc1b9e640ff2d867cff6d17da3df65775230d2e2c54a52d92a2156283f884a"
     },
     {
       "path": "scripts/pnpm-install.mjs",
@@ -804,5 +804,6 @@
       "path": "vite.config.ts",
       "sha256": "532c2ec2951fd32a9a7720f6297a62232020ab7ee6c1519cbb80089d89e37375"
     }
-  ]
+  ],
+  "hash_basis": "Git blob bytes (LF normalization), excludes this manifest"
 }
