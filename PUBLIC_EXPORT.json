@@ -17,6 +17,10 @@
       "sha256": "706e500d4b03fd3d06e4f31a93861c6d4c5a5c982064426720789a5889d8f73b"
     },
     {
+      "path": ".github/workflows/review.yml",
+      "sha256": "547f3e57b77cce30331a19c14e2a6b038cefe7b24208e230f0f044ff4357679f"
+    },
+    {
       "path": ".gitignore",
       "sha256": "2bf1e6cae7bceaddfd8ba22cdddae8154ed666e1593330be8dfa0a7dc31a3bbb"
     },
@@ -126,7 +130,7 @@
     },
     {
       "path": "components/portfolio.tsx",
-      "sha256": "5bb691210699a214d98fadde8825ec5feb7d75199a6a6c116f76e7b808779799"
+      "sha256": "ded8730b6f7fd637177799bd6de9f871471036396c60418d8703f4e2c211feff"
     },
     {
       "path": "components/quality.tsx",
@@ -730,7 +734,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "091de700897f9491712977d59e525322e7a098aeefa856215668a7576d7edb4b"
+      "sha256": "c3784f2c00ac8d9b44f803a52a1a533fb75715bc51a4cda3fd91449848e14a15"
     },
     {
       "path": "scripts/build-verified.sh",
